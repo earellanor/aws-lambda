@@ -42,6 +42,13 @@ teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda % serverless create --template
 
 % serverless invoke -f hello -l
 
+# to check online log's 
+
+% serverless logs -f hello -t
+
+# Remove everything relted to the function
+
+% serverless remove
 
 
 
