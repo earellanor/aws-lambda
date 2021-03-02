@@ -1,0 +1,45 @@
+Workdir:  /Users/teodoroarellano/Vistranslation/AWS/aws-lambda
+
+
+# A new user with programmatic-access was created using IAM console, below the credentials obteined
+
+teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda % cat ../serverless_user_credentials.csv
+User name,Password,Access key ID,Secret access key,Console login link
+serverless-admin,,AKIAS4UHLXI5B3GXKIUD,xWR4iznYTsm5KwA1/le832LqjQNKpFhmbCxq/1sI,https://earellano.signin.aws.amazon.com/console
+teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda %
+
+#
+# we can use command serverless or sls (metodo abreviado)
+#
+
+teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda % serverless config credentials --provider aws --key AKIAS4UHLXI5B3GXKIUD --secret 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 --profile serverless-admin
+Serverless: Setting up AWS...
+teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda %
+
+# create a hello-world python project
+
+teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda % serverless create --template aws-python --path hello-world-python
+
+teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda % serverless create --help
+
+# create a hello-world java-maven project 
+
+teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda % serverless create --template aws-java-maven --path hello-world-java-maven
+
+# package java project
+
+% mvn clean package
+
+# deploy java project into AWS
+
+% serverless deploy -v
+
+# execute lambda function from command-lina, "hello" parameter in inside of the YAML filese
+
+% serverless invoke -f hello -l
+
+
+
+
+
+
