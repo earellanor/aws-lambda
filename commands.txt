@@ -1,18 +1,14 @@
 Workdir:  /Users/teodoroarellano/Vistranslation/AWS/aws-lambda
 
 
-# A new user with programmatic-access was created using IAM console, below the credentials obteined
+# A new user with programmatic-access was created using IAM console
 
-teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda % cat ../serverless_user_credentials.csv
-User name,Password,Access key ID,Secret access key,Console login link
-serverless-admin,,AKIAS4UHLXI5B3GXKIUD,xWR4iznYTsm5KwA1/le832LqjQNKpFhmbCxq/1sI,https://earellano.signin.aws.amazon.com/console
-teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda %
 
 #
 # we can use command serverless or sls (metodo abreviado)
 #
 
-teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda % serverless config credentials --provider aws --key AKIAS4UHLXI5B3GXKIUD --secret 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 --profile serverless-admin
+teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda % serverless config credentials --provider aws --key XXXX --secret XXXX --profile serverless-admin
 Serverless: Setting up AWS...
 teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda %
 
