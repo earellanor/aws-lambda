@@ -34,6 +34,13 @@ teodoroarellano@MacBook-Pro-de-Teodoro aws-lambda % serverless create --template
 
 % serverless invoke -f hello -l
 
+# future changes, after CODE changes a quick deploy could be done by 
+
+% serverless deploy function -f hello
+
+# and then test again
+
+% serverless invoke -f hello -l
 
 
 
